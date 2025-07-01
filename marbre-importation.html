@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marbre d'Importation - Brahim Rocks</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="Img/logoicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Img/logoicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Img/logoicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .parallax-hero {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100vh;
+            perspective: 1000px;
+            background: #E5E4E2;
+            transform-style: preserve-3d;
+        }
+
+        .hero-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: translateZ(0);
+            will-change: transform;
+            transition: transform 0.1s ease-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .products-section {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #fff;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <section id="header">
+        <a href="index.html"><img src="Img/logo.png" class="logo" alt="Brahim Rocks Logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos de nous</a></li>
+                <li class="dropdown">
+                    <a href="marbre-importation.html">Nos Produits <i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="marbre-ascale.html">Produits Asacale</a></li>
+                        <li><a href="marbre-importation.html">Produits d'Importation</a></li>
+                        <li><a href="marbre-local.html">Produits Local</a></li>
+                    </ul>
+                </li>
+                <li><a href="galery.html">Galerie</a></li>
+                <li><a href="contact.html">Contactez-nous</a></li>
+            </ul>
+            <div id="mobile">
+                <i class="fas fa-bars" id="bar"></i>
+            </div>
+        </div>
+    </section>
+
+    <div class="main-container">
+        <!-- Parallax Hero Section -->
+        <section class="parallax-hero">
+            <div class="hero-content">
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section">
+            <div class="products-container">
+                <div class="section-title">
+                    <h2>Notre Collection Importée</h2>
+                    <p>Une gamme exclusive de marbres importés, sélectionnés avec soin pour leur beauté exceptionnelle et leur qualité irréprochable.</p>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="Img/Import/Artificiel Beige.png" alt="Artificiel Beige">
+                        <div class="product-info">
+                            <h3>Artificiel Beige</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Baltic Brown.png" alt="Baltic Brown">
+                        <div class="product-info">
+                            <h3>Baltic Brown</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Black Cosmic.png" alt="Black Cosmic">
+                        <div class="product-info">
+                            <h3>Black Cosmic</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Blanc Artificiel.png" alt="Blanc Artificiel">
+                        <div class="product-info">
+                            <h3>Blanc Artificiel</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Blanc Carrare.png" alt="Blanc Carrare">
+                        <div class="product-info">
+                            <h3>Blanc Carrare</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Blanc Ibiza.png" alt="Blanc Ibiza">
+                        <div class="product-info">
+                            <h3>Blanc Ibiza</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Blanc Portugal.png" alt="Blanc Portugal">
+                        <div class="product-info">
+                            <h3>Blanc Portugal</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Blanc Silistone.png" alt="Blanc Silistone">
+                        <div class="product-info">
+                            <h3>Blanc Silistone</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Calcatta White.png" alt="Calcatta White">
+                        <div class="product-info">
+                            <h3>Calcatta White</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Crema Marfil.png" alt="Crema Marfil">
+                        <div class="product-info">
+                            <h3>Crema Marfil</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Crema Royal.png" alt="Crema Royal">
+                        <div class="product-info">
+                            <h3>Crema Royal</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Forest Black.png" alt="Forest Black">
+                        <div class="product-info">
+                            <h3>Forest Black</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Granit Crema Julia.png" alt="Granit Crema Julia">
+                        <div class="product-info">
+                            <h3>Granit Crema Julia</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Granit Grand Perla.png" alt="Granit Grand Perla">
+                        <div class="product-info">
+                            <h3>Granit Grand Perla</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Granit Rose Porrino.png" alt="Granit Rose Porrino">
+                        <div class="product-info">
+                            <h3>Granit Rose Porrino</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Granit Rouge Balmara.png" alt="Granit Rouge Balmara">
+                        <div class="product-info">
+                            <h3>Granit Rouge Balmara</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Granitt Blanc Perle.png" alt="Granitt Blanc Perle">
+                        <div class="product-info">
+                            <h3>Granitt Blanc Perle</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Granitt Gris Perla.png" alt="Granitt Gris Perla">
+                        <div class="product-info">
+                            <h3>Granitt Gris Perla</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Granitt Labrador Bleu.png" alt="Granitt Labrador Bleu">
+                        <div class="product-info">
+                            <h3>Granitt Labrador Bleu</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Granitt Multicolor.png" alt="Granitt Multicolor">
+                        <div class="product-info">
+                            <h3>Granitt Multicolor</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Granitt Raphael.png" alt="Granitt Raphael">
+                        <div class="product-info">
+                            <h3>Granitt Raphael</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Granitt Rosavel.png" alt="Granitt Rosavel">
+                        <div class="product-info">
+                            <h3>Granitt Rosavel</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Halayab.png" alt="Halayab">
+                        <div class="product-info">
+                            <h3>Halayab</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Marron Imperial.png" alt="Marron Imperial">
+                        <div class="product-info">
+                            <h3>Marron Imperial</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/New Halayab.png" alt="New Halayab">
+                        <div class="product-info">
+                            <h3>New Halayab</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Noir Absolu.png" alt="Noir Absolu">
+                        <div class="product-info">
+                            <h3>Noir Absolu</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Noir Galaxy.png" alt="Noir Galaxy">
+                        <div class="product-info">
+                            <h3>Noir Galaxy</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Noir Labrador.png" alt="Noir Labrador">
+                        <div class="product-info">
+                            <h3>Noir Labrador</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Perlatino.png" alt="Perlatino">
+                        <div class="product-info">
+                            <h3>Perlatino</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Perlantino.png" alt="Perlantino">
+                        <div class="product-info">
+                            <h3>Perlantino</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Pirgon Blanc.png" alt="Pirgon Blanc">
+                        <div class="product-info">
+                            <h3>Pirgon Blanc</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Rose Portugal.png" alt="Rose Portugal">
+                        <div class="product-info">
+                            <h3>Rose Portugal</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Import/Silvia.png" alt="Silvia">
+                        <div class="product-info">
+                            <h3>Silvia</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <br>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section footer-logo">
+                <img src="Img/logo.png" alt="Brahim Rocks Logo" class="footer-logo-img">
+                <p>Spécialisée dans la sélection de marbre et de granit, Brahim Rocks incarne l'excellence artisanale et l'élégance naturelle. Nous façonnons des pièces uniques qui conjuguent esthétisme, durabilité et raffinement.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contactez-nous</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 01, Bravo Industrie, Tamnsourt Marakech</p>
+                <p><i class="fas fa-phone-alt"></i> +212 661-794684</p>
+                <p><i class="fas fa-envelope"></i> batlimousstone@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos de nous</a></li>
+                    <li><a href="marbre-ascale.html">Produits Asacale</a></li>
+                    <li><a href="marbre-importation.html">Produits d'Importation</a></li>
+                    <li><a href="marbre-local.html">Produits Locaux</a></li>
+                    <li><a href="galery.html">Galerie</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1L82psdAKw/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/brahim_rock5?igsh=cDdoMXZ0bXpheWZv" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.link/ihano2" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Brahim Rocks. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

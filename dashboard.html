@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - BR Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="dashboard-nav">
+            <div class="logo">BR Project</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#analytics">Analytics</a></li>
+                <li><a href="#settings">Settings</a></li>
+            </ul>
+        </nav>
+
+        <main class="dashboard-main">
+            <header class="dashboard-header">
+                <h1>Dashboard</h1>
+                <div class="dashboard-actions">
+                    <button class="action-btn" data-action="refresh">Refresh</button>
+                    <button class="action-btn" data-action="export">Export</button>
+                    <button class="action-btn" data-action="settings">Settings</button>
+                </div>
+            </header>
+
+            <section id="overview" class="dashboard-stats">
+                <div class="stat-card">
+                    <h3>Total Users</h3>
+                    <p class="stat-value">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Active Users</h3>
+                    <p class="stat-value">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Revenue</h3>
+                    <p class="stat-value">$0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Monthly Growth</h3>
+                    <p class="stat-value">0%</p>
+                </div>
+            </section>
+
+            <section id="analytics" class="dashboard-charts">
+                <div class="chart-container">
+                    <canvas id="user-chart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="revenue-chart"></canvas>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

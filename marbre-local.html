@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marbre Local - Brahim Rocks</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="Img/logoicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Img/logoicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Img/logoicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .local-parallax-hero {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 500px;
+            perspective: 1000px;
+            background: url('Img/Local/heading.png') no-repeat center center;
+            background-size: cover;
+        }
+
+        .hero-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: translateZ(0);
+            will-change: transform;
+            transition: transform 0.1s ease-out;
+        }
+
+        .hero-content.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .products-section {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #fff;
+            position: relative;
+            z-index: 1;
+        }
+
+        .products-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 20px 0 40px 0;
+        }
+
+        .product-card {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .product-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5em;
+            color: #fff;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <section id="header">
+        <a href="index.html"><img src="Img/logo.png" class="logo" alt="Brahim Rocks Logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos de nous</a></li>
+                <li class="dropdown">
+                    <a href="marbre-local.html">Nos Produits <i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="marbre-ascale.html">Produits Asacale</a></li>
+                        <li><a href="marbre-importation.html">Produits d'Importation</a></li>
+                        <li><a href="marbre-local.html">Produits locaux</a></li>
+                    </ul>
+                </li>
+                <li><a href="galery.html">Galerie</a></li>
+                <li><a href="contact.html">Contactez-nous</a></li>
+            </ul>
+            <div id="mobile">
+                <i class="fas fa-bars" id="bar"></i>
+            </div>
+        </div>
+    </section>
+
+    <div class="main-container">
+        <!-- Parallax Hero Section -->
+        <section class="local-parallax-hero">
+            <div class="hero-content">
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section">
+            <div class="products-container">
+                <div class="section-title">
+                    <h2>Notre Collection Locale</h2>
+                    <p>Une sélection de marbres locaux qui reflètent l'authenticité et la beauté de nos produits</p>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="Img/Local/Blanc Zayame.png" alt="Blanc Zayane">
+                        <div class="product-info">
+                            <h3>Blanc Zayane</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Local/Gris Benslimane.png" alt="Gris Benslimane">
+                        <div class="product-info">
+                            <h3>Gris Benslimane</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Local/Gris Khenifra.png" alt="Gris Khenifra">
+                        <div class="product-info">
+                            <h3>Gris Khenifra</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Local/Gris Oro.png" alt="Gris Oro">
+                        <div class="product-info">
+                            <h3>Gris Oro</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Local/Gris Sahara.png" alt="Gris Sahara">
+                        <div class="product-info">
+                            <h3>Gris Sahara</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Local/Gris Tundra.png" alt="Gris Tundra">
+                        <div class="product-info">
+                            <h3>Gris Tundra</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Local/Gris Violet Sable.png" alt="Gris Violet Sable">
+                        <div class="product-info">
+                            <h3>Gris Violet Sable</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Local/Noir Khenifra.png" alt="Noir Khenifra">
+                        <div class="product-info">
+                            <h3>Noir Khenifra</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Local/Noir Royal.png" alt="Noir Royal">
+                        <div class="product-info">
+                            <h3>Noir Royal</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Local/Noir Tinghir.jpeg" alt="Noir Tinghir">
+                        <div class="product-info">
+                            <h3>Noir Tinghir</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Local/Rouge Agadir.png" alt="Rouge Agadir">
+                        <div class="product-info">
+                            <h3>Rouge Agadir</h3>
+                        </div>
+                    </div>
+                     <div class="product-card">
+                        <img src="Img/Local/Rouge Itrane Sable.png" alt="Rouge Itrane Sable">
+                        <div class="product-info">
+                            <h3>Rouge Itrane Sablé</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Local/Rouge Tinghir.jpeg" alt="Rouge Tinghir">
+                        <div class="product-info">
+                            <h3>Rouge Tinghir</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Local/Smaala Jaune Boucharde.png" alt="Smaala Jaune Boucharde">
+                        <div class="product-info">
+                            <h3>Smaala Jaune Bouchardé</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Local/Smaala Jaune Sable.png" alt="Smaala Jaune Sable">
+                        <div class="product-info">
+                            <h3>Smaala Jaune Sablé</h3>
+                        </div>
+                    </div>
+                     <div class="product-card">
+                        <img src="Img/Local/Taza Beige Boucharde.png" alt="Taza Beige Boucharde">
+                        <div class="product-info">
+                            <h3>Taza Beige Bouchardé</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Local/Taza Beige Brut.png" alt="Taza Beige Brut">
+                        <div class="product-info">
+                            <h3>Taza Beige Brut</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Local/Taza Beige Polis.png" alt="Taza Beige Polis">
+                        <div class="product-info">
+                            <h3>Taza Beige Polis</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Local/Taza beige Vieilit.png" alt="Taza beige Vieilit">
+                        <div class="product-info">
+                            <h3>Taza beige Vieilit</h3>
+                        </div>
+                    </div>
+                     <div class="product-card">
+                        <img src="Img/Local/Taza Gris  Boucharde.png" alt="Taza Gris Boucharde">
+                        <div class="product-info">
+                            <h3>Taza Gris Bouchardé</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Local/Taza Gris Brut.png" alt="Taza Gris Brut">
+                        <div class="product-info">
+                            <h3>Taza Gris Brut</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Local/Taza Gris Polis.png" alt="Taza Gris Polis">
+                        <div class="product-info">
+                            <h3>Taza Gris Polis</h3>
+                        </div>
+                    </div>
+                     <div class="product-card">
+                        <img src="Img/Local/Tundra Gris Boucharde.png" alt="Tundra Gris Boucharde">
+                        <div class="product-info">
+                            <h3>Tundra Gris Bouchardé</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Local/Tundra Gris Vielli.png" alt="Tundra Gris Vielli">
+                        <div class="product-info">
+                            <h3>Tundra Gris Viellit</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Img/Local/Volibulis.png" alt="Volibulis">
+                        <div class="product-info">
+                            <h3>Volibulis</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <br>
+     <!-- Footer -->
+     <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section footer-logo">
+                <img src="Img/logo.png" alt="Brahim Rocks Logo" class="footer-logo-img">
+                <p>Spécialisée dans la sélection de marbre et de granit, Brahim Rocks incarne l'excellence artisanale et l'élégance naturelle. Nous façonnons des pièces uniques qui conjuguent esthétisme, durabilité et raffinement.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contactez-nous</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 01, Bravo Industrie, Tamnsourt Marakech</p>
+                <p><i class="fas fa-phone-alt"></i> +212 661-794684</p>
+                <p><i class="fas fa-envelope"></i> batlimousstone@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos de nous</a></li>
+                    <li><a href="marbre-ascale.html">Produits Asacale</a></li>
+                    <li><a href="marbre-importation.html">Produits d'Importation</a></li>
+                    <li><a href="marbre-local.html">Produits Locaux</a></li>
+                    <li><a href="galery.html">Galerie</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1L82psdAKw/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/brahim_rock5?igsh=cDdoMXZ0bXpheWZv" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.link/ihano2" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Brahim Rocks. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroContent = document.querySelector('.hero-content');
+            let ticking = false;
+            let lastScrollY = window.scrollY;
+            let currentTranslate = 0;
+
+            function updateParallax() {
+                const scrolled = window.scrollY;
+                const delta = scrolled - lastScrollY;
+                lastScrollY = scrolled;
+
+                // Calculate new position with smooth acceleration/deceleration
+                currentTranslate += delta * 0.3;
+                
+                // Apply smooth easing
+                const targetTranslate = currentTranslate * 0.95;
+                currentTranslate = targetTranslate;
+
+                // Apply the transform with hardware acceleration
+                heroContent.style.transform = `translate3d(0, ${currentTranslate}px, 0)`;
+            }
+
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                        updateParallax();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+
+            // Reset position when scrolling to top
+            window.addEventListener('scroll', function() {
+                if (window.scrollY === 0) {
+                    currentTranslate = 0;
+                    heroContent.style.transform = 'translate3d(0, 0, 0)';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html> 

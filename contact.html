@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="Img/logoicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Img/logoicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Img/logoicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <section id="header">
+        <a href="index.html"><img src="Img/logo.png" class="logo" alt="Brahim Rocks Logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos de nous</a></li>
+                <li class="dropdown">
+                    <a href="marbre-ascale.html">Nos Produits <i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="marbre-ascale.html">Produits Asacale</a></li>
+                        <li><a href="marbre-importation.html">Produits d'Importation</a></li>
+                        <li><a href="marbre-local.html">Produits Locaux</a></li>
+                    </ul>
+                </li>
+                <li><a href="galery.html">Galerie</a></li>
+                <li><a href="contact.html">Contactez-nous</a></li>
+            </ul>
+            <div id="mobile">
+                <i class="fas fa-bars" id="bar"></i>
+            </div>
+        </div>
+    </section>
+
+    <div class="banniere-bg"></div>
+
+    <div class="contact-gallery-row">
+        <form class="contact-form-petit" id="contactForm">
+            <h3>Contactez-nous</h3>
+            <div class="form-group">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Votre email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Téléphone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Votre numéro de téléphone" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Envoyer</button>
+        </form>
+        <div class="gallery3-cadre">
+            <img src="Img/Presentation/Gallery3.jpeg" alt="Gallery3">
+        </div>
+    </div>
+
+    <div class="contact-info-container">
+        <div class="contact-info-box">
+            <i class="fas fa-phone-alt" style="transform: rotate(90deg);"></i>
+            <h4>Appelez-nous</h4>
+            <p>+212 661-794684</p>
+        </div>
+        <div class="contact-info-box">
+            <i class="fas fa-map-marker-alt"></i>
+            <h4>Localisation</h4>
+            <p>01, Bravo Industrie</p>
+            <p>Tamnsourt Marakech</p>
+        </div>
+        <div class="contact-info-box">
+            <i class="fas fa-clock"></i>
+            <h4>Horraire de travail</h4>
+            <p>Lundi - Vendredi: 9h - 18h</p>
+            <p>Samedi: 9h - 16h</p>
+        </div>
+    </div>
+
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.123456789012!2d-8.1324267!3d31.7727979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdaf9593a93a3139%3A0x4075e48d6d07fbb1!2sBravo%20Industrie%20Maroc!5e0!3m2!1sfr!2sma!4v1234567890!5m2!1sfr!2sma" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section footer-logo">
+                <img src="Img/logo.png" alt="Brahim Rocks Logo" class="footer-logo-img">
+                <p>Spécialisée dans la sélection de marbre et de granit, Brahim Rocks incarne l'excellence artisanale et l'élégance naturelle. Nous façonnons des pièces uniques qui conjuguent esthétisme, durabilité et raffinement.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contactez-nous</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 01, Bravo Industrie, Tamnsourt Marakech</p>
+                <p><i class="fas fa-phone-alt" style="transform: rotate(90deg);"></i> +212 661-794684</p>
+                <p><i class="fas fa-envelope"></i> batlimousstone@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos de nous</a></li>
+                    <li><a href="marbre-ascale.html">Produits Asacale</a></li>
+                    <li><a href="marbre-importation.html">Produits d'Importation</a></li>
+                    <li><a href="marbre-local.html">Produits Locaux</a></li>
+                    <li><a href="galery.html">Galerie</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1L82psdAKw/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/brahim_rock5?igsh=cDdoMXZ0bXpheWZv" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.link/ihano2" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Brahim Rocks. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

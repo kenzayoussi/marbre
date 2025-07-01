@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos de nous - Brahim Rocks</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="Img/logoicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Img/logoicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Img/logoicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .banner {
+            width: 100%;
+            margin-top: 85px;
+            overflow: hidden;
+            max-height: 300px;
+            background-color: #EADDCA;
+        }
+
+        .banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-height: 300px;
+            object-fit: contain;
+        }
+
+        .about-header {
+            text-align: center;
+            padding: 60px 30px 50px 30px;
+            background: linear-gradient(135deg, #fff 70%, #f7f2ea 100%);
+            border-radius: 18px;
+            box-shadow: 0 6px 32px rgba(196, 164, 132, 0.10), 0 1.5px 6px rgba(0,0,0,0.04);
+            margin: 40px auto 32px auto;
+            max-width: 900px;
+            position: relative;
+        }
+
+        .about-header h1 {
+            font-size: 2.8rem;
+            color: #111;
+            margin-bottom: 18px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+            position: relative;
+            display: inline-block;
+        }
+        .about-header h1::after {
+            display: none;
+        }
+
+        .about-header p {
+            font-size: 1.18rem;
+            color: #111;
+            max-width: 750px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+        }
+
+        @media (max-width: 900px) {
+            .about-header {
+                padding: 40px 10px 35px 10px;
+            }
+            .about-header h1 {
+                font-size: 2.1rem;
+            }
+            .about-header p {
+                font-size: 1.05rem;
+            }
+        }
+
+        .process {
+            padding: 60px 20px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .process h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #1a1a1a;
+            margin-bottom: 40px;
+            font-family: 'Playfair Display', serif;
+            width: 100%;
+        }
+
+        .process-images {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            width: 100%;
+            padding: 20px 0;
+            justify-content: center;
+        }
+
+        .process-image {
+            width: 250px;
+            height: 250px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #EADDCA;
+            margin: 0 auto;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .process-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.3s ease;
+        }
+
+        .process-image:hover img {
+            transform: scale(1.1);
+        }
+
+        .process-description {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 50%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .process-image:hover .process-description {
+            opacity: 1;
+        }
+
+        .process-description h3 {
+            color: #1a1a1a;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .process-description p {
+            color: #1a1a1a;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 1200px) {
+            .process-images {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .process-images {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .process-images {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .process-image {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        .offers {
+            padding: 60px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .offers-title {
+            font-size: 2rem;
+            color: #C4A484;
+            margin-bottom: 40px;
+            font-family: 'Playfair Display', serif;
+            text-transform: uppercase;
+        }
+
+        .offers-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .offers-image:hover {
+            transform: scale(1.02);
+        }
+
+        @media (max-width: 768px) {
+            .offers {
+                padding: 40px 15px;
+            }
+            .offers-title {
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <section id="header">
+        <a href="index.html"><img src="Img/logo.png" class="logo" alt="Brahim Rocks Logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos de nous</a></li>
+                <li class="dropdown">
+                    <a href="marbre-ascale.html">Nos Produits <i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="marbre-ascale.html">Produits Asacale</a></li>
+                        <li><a href="marbre-importation.html">Produits d'Importation</a></li>
+                        <li><a href="marbre-local.html">Produits Locaux</a></li>
+                    </ul>
+                </li>
+                <li><a href="galery.html">Galerie</a></li>
+                <li><a href="contact.html">Contactez-nous</a></li>
+            </ul>
+            <div id="mobile">
+                <i class="fas fa-bars" id="bar"></i>
+            </div>
+        </div>
+    </section>
+
+    <div class="banner">
+        <img src="Img/Presentation/Banner About.png" alt="About Us Banner" class="banner-img">
+    </div>
+
+    <div class="about-header">
+        <h1>À propos de nous</h1>
+        <p>Depuis 2019, Brahim Rocks est une entreprise basée à Marrakech, spécialisée dans la création et la transformation du marbre, du granit et d'autres pierres naturelles. Nous mettons notre savoir-faire artisanal au service de projets élégants et durables, pensés pour embellir tous types d'espaces, intérieurs comme extérieurs.
+
+            De la sélection des matériaux à la réalisation finale, chaque étape est soigneusement maîtrisée afin d'assurer un résultat à la fois solide, esthétique et raffiné. Nos créations s'adressent aussi bien aux professionnels qu'aux particuliers, pour des projets sur mesure tels que des plans de cuisine, des sols, des murs, des escaliers ou encore des objets de décoration.
+            
+            Chez Brahim Rocks, nous croyons à la beauté des matières naturelles et à l'importance des détails. Notre équipe travaille avec passion pour donner vie à des espaces uniques, en alliant tradition, qualité et créativité.
+            
+            </p>
+    </div>
+
+    <div class="process">
+        <h2>Notre Processus</h2>
+        <div class="process-images">
+            <div class="process-image">
+                <img src="Img/Presentation/Stone Selection.jpeg" alt="Stone Selection Process">
+                <div class="process-description">
+                    <h3>Sélection de Pierre</h3>
+                    <p>Nous sélectionnons minicieusement les meilleurs matériaux pour garantir la qualité de nos produits.</p>
+                </div>
+            </div>
+            <div class="process-image">
+                <img src="Img/Presentation/Prise Meusure.png" alt="Prise de Mesure">
+                <div class="process-description">
+                    <h3>Prise de Mesure</h3>
+                    <p>Nous mesurons toute votre pièce pour assurer un ajustement parfait de chaque coin.</p>
+                </div>
+            </div>
+            <div class="process-image">
+                <img src="Img/Presentation/templating.jpeg" alt="Templating Process">
+                <div class="process-description">
+                    <h3>Modeling</h3>
+                    <p>Création de modèles précis pour garantir la perfection de chaque détail.</p>
+                </div>
+            </div>
+            <div class="process-image">
+                <img src="Img/Presentation/Fabrication.jpeg" alt="Fabrication Process">
+                <div class="process-description">
+                    <h3>Fabrication</h3>
+                    <p>Transformation des matériaux bruts en œuvres d'art avec précision et expertise.</p>
+                </div>
+            </div>
+            <div class="process-image">
+                <img src="Img/Presentation/Pose.jpeg" alt="Pose Process">
+                <div class="process-description">
+                    <h3>Pose</h3>
+                    <p>Installation professionnelle assurant une finition impeccable.</p>
+                </div>
+            </div>
+            <div class="process-image">
+                <img src="Img/Presentation/Polish.jpeg" alt="Polish Process">
+                <div class="process-description">
+                    <h3>Finition</h3>
+                    <p>Dernières retouches soignée pour un résultat brillant et durable.</p>
+                </div>
+            </div>
+            <div class="process-image">
+                <img src="Img/Presentation/Transport.jpeg" alt="Transport Process">
+                <div class="process-description">
+                    <h3>Transport</h3>
+                    <p>Livraison sécurisée et professionnelle de vos commandes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offers">
+        <h2 class="offers-title">Ce que nous travaillons</h2>
+        <img src="Img/Presentation/Rubrique.png" alt="Nos Rubriques" class="offers-image">
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section footer-logo">
+                <img src="Img/logo.png" alt="Brahim Rocks Logo" class="footer-logo-img">
+                <p>Spécialisée dans la sélection de marbre et de granit, Brahim Rocks incarne l'excellence artisanale et l'élégance naturelle. Nous façonnons des pièces uniques qui conjuguent esthétisme, durabilité et raffinement.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contactez-nous</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 01, Bravo Industrie, Tamnsourt Marakech</p>
+                <p><i class="fas fa-phone-alt" style="transform: rotate(90deg);"></i> +212 661-794684</p>
+                <p><i class="fas fa-envelope"></i> batlimousstone@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos de nous</a></li>
+                    <li><a href="marbre-ascale.html">Produits Asacale</a></li>
+                    <li><a href="marbre-importation.html">Produits d'Importation</a></li>
+                    <li><a href="marbre-local.html">Produits Locaux</a></li>
+                    <li><a href="galery.html">Galerie</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1L82psdAKw/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/brahim_rock5?igsh=cDdoMXZ0bXpheWZv" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.link/ihano2" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Brahim Rocks. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

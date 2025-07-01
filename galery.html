@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie - Brahim Rocks</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="Img/logoicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Img/logoicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Img/logoicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <section id="header">
+        <a href="index.html"><img src="Img/logo.png" class="logo" alt="Brahim Rocks Logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos de nous</a></li>
+                <li class="dropdown">
+                    <a href="marbre-ascale.html">Nos Produits <i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="marbre-ascale.html">Produits Asacale</a></li>
+                        <li><a href="marbre-importation.html">Produits d'Importation</a></li>
+                        <li><a href="marbre-local.html">Produits Locaux</a></li>
+                    </ul>
+                </li>
+                <li><a href="gallery.html" class="active">Galerie</a></li>
+                <li><a href="contact.html">Contactez-nous</a></li>
+            </ul>
+            <div id="mobile">
+                <i class="fas fa-bars" id="bar"></i>
+            </div>
+        </div>
+    </section>
+    <div class="banner-section">
+      <img src="Img/Gallery/banner.jpeg" alt="Galerie Banner" class="banner-image">
+    </div>
+    <h1 class="gallery-title">Notre Galerie de projet</h1>
+    <script src="script.js"></script>
+
+    <!-- Gallery Grid -->
+    <div class="gallery-grid">
+      <img src="Img/Gallery/1.jpeg" class="gallery-thumb" alt="Gallery Image">
+      <img src="Img/Gallery/2.jpeg" class="gallery-thumb" alt="Gallery Image">
+      <img src="Img/Gallery/3.jpeg" class="gallery-thumb" alt="Gallery Image">
+      <img src="Img/Gallery/4.jpeg" class="gallery-thumb" alt="Gallery Image">
+      <img src="Img/Gallery/14.jpeg" class="gallery-thumb" alt="Gallery Image">
+      <img src="Img/Gallery/5.jpeg" class="gallery-thumb" alt="Gallery Image">
+      <img src="Img/Gallery/6.jpeg" class="gallery-thumb" alt="Gallery Image">
+      <img src="Img/Gallery/7.jpeg" class="gallery-thumb" alt="Gallery Image">
+      <img src="Img/Gallery/8.jpeg" class="gallery-thumb" alt="Gallery Image">
+      <img src="Img/Gallery/9.jpeg" class="gallery-thumb" alt="Gallery Image">
+      <img src="Img/Gallery/10.jpeg" class="gallery-thumb" alt="Gallery Image">
+      <img src="Img/Gallery/11.jpeg" class="gallery-thumb" alt="Gallery Image">
+      <img src="Img/Gallery/12.jpeg" class="gallery-thumb" alt="Gallery Image">
+      <img src="Img/Gallery/13.jpeg" class="gallery-thumb" alt="Gallery Image">
+
+    </div>
+
+    <!-- Modal for full image view -->
+    <div id="modal" class="modal">
+      <span class="close">&times;</span>
+      <span class="arrow left">&#10094;</span>
+      <img class="modal-content" id="modal-img">
+      <span class="arrow right">&#10095;</span>
+    </div>
+
+    <style>
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 32px;
+        max-width: 1200px;
+        margin: 80px auto 40px auto;
+        padding: 40px 2vw 0 2vw;
+      }
+      .gallery-thumb {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      }
+      .gallery-thumb:hover {
+        transform: scale(1.04);
+        box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+      }
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: auto;
+        background: rgba(0,0,0,0.85);
+        align-items: center;
+        justify-content: center;
+      }
+      .modal-content {
+        margin: auto;
+        display: block;
+        max-width: 90vw;
+        max-height: 90vh;
+        border-radius: 10px;
+        box-shadow: 0 4px 32px rgba(0,0,0,0.4);
+      }
+      .close {
+        position: absolute;
+        top: 30px;
+        right: 50px;
+        color: #fff;
+        font-size: 2.5rem;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 1100;
+        transition: color 0.2s;
+      }
+      .close:hover {
+        color: #C4A484;
+      }
+      .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 1100;
+        user-select: none;
+        padding: 0 18px;
+        transition: color 0.2s;
+      }
+      .arrow.left {
+        left: 20px;
+      }
+      .arrow.right {
+        right: 20px;
+      }
+      .arrow:hover {
+        color: #C4A484;
+      }
+      @media (max-width: 700px) {
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 16px;
+          margin-top: 24px;
+          padding-top: 12px;
+        }
+        .gallery-thumb {
+          height: 38vw;
+          min-height: 120px;
+          max-height: 45vw;
+          object-fit: contain;
+          background: #f7f7f7;
+          border-radius: 10px;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+      }
+      .phone-reverse {
+        transform: scaleX(-1);
+        display: inline-block;
+      }
+      .banner-section {
+        width: 100vw;
+        max-width: 100vw;
+        height: 320px;
+        overflow: hidden;
+        position: relative;
+        margin: 32px 0 40px 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0;
+        background: #f7f7f7;
+      }
+      .banner-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: 0;
+        background: transparent;
+      }
+      @media (max-width: 700px) {
+        .banner-section {
+          height: 160px;
+          margin-top: 16px;
+          margin-bottom: 24px;
+          width: 100vw;
+          border-radius: 0;
+        }
+      }
+      .gallery-title {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 500;
+        color: #C4A484;
+        margin: 40px 0 32px 0;
+        padding-bottom: 10px;
+        letter-spacing: 2px;
+        border-bottom: 2px solid #eee;
+        display: inline-block;
+        width: 100%;
+      }
+    </style>
+    <script>
+      // Modal functionality with image scroller
+      const modal = document.getElementById('modal');
+      const modalImg = document.getElementById('modal-img');
+      const closeBtn = document.querySelector('.close');
+      const leftArrow = document.querySelector('.arrow.left');
+      const rightArrow = document.querySelector('.arrow.right');
+      const galleryThumbs = Array.from(document.querySelectorAll('.gallery-thumb'));
+      let currentIndex = 0;
+
+      function showModal(index) {
+        currentIndex = index;
+        modal.style.display = 'flex';
+        modalImg.src = galleryThumbs[currentIndex].src;
+      }
+
+      galleryThumbs.forEach((img, idx) => {
+        img.addEventListener('click', function() {
+          showModal(idx);
+        });
+      });
+
+      closeBtn.onclick = function() {
+        modal.style.display = 'none';
+        modalImg.src = '';
+      }
+      leftArrow.onclick = function(e) {
+        e.stopPropagation();
+        currentIndex = (currentIndex - 1 + galleryThumbs.length) % galleryThumbs.length;
+        modalImg.src = galleryThumbs[currentIndex].src;
+      }
+      rightArrow.onclick = function(e) {
+        e.stopPropagation();
+        currentIndex = (currentIndex + 1) % galleryThumbs.length;
+        modalImg.src = galleryThumbs[currentIndex].src;
+      }
+      window.onclick = function(event) {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+          modalImg.src = '';
+        }
+      }
+      // Keyboard navigation
+      window.addEventListener('keydown', function(e) {
+        if (modal.style.display === 'flex') {
+          if (e.key === 'ArrowLeft') {
+            leftArrow.click();
+          } else if (e.key === 'ArrowRight') {
+            rightArrow.click();
+          } else if (e.key === 'Escape') {
+            closeBtn.click();
+          }
+        }
+      });
+    </script>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section footer-logo">
+          <img src="Img/logo.png" alt="Brahim Rocks Logo" class="footer-logo-img">
+          <p>Spécialisée dans la sélection de marbre et de granit, Brahim Rocks incarne l'excellence artisanale et l'élégance naturelle. Nous façonnons des pièces uniques qui conjuguent esthétisme, durabilité et raffinement.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Contactez-nous</h3>
+          <p><i class="fas fa-map-marker-alt"></i> 01, Bravo Industrie, Tamnsourt Marakech</p>
+          <p><i class="fas fa-phone-alt phone-reverse"></i> +212 661-794684</p>
+          <p><i class="fas fa-envelope"></i> batlimousstone@gmail.com</p>
+        </div>
+        <div class="footer-section">
+          <h3>Navigation</h3>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos de nous</a></li>
+            <li><a href="marbre-ascale.html">Produits Asacale</a></li>
+            <li><a href="marbre-importation.html">Produits d'Importation</a></li>
+            <li><a href="marbre-local.html">Produits Locaux</a></li>
+            <li><a href="galery.html">Galerie</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Suivez-nous</h3>
+          <div class="social-links">
+            <a href="https://www.facebook.com/share/1L82psdAKw/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/brahim_rock5?igsh=cDdoMXZ0bXpheWZv" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.link/ihano2" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Brahim Rocks. Tous droits réservés.</p>
+      </div>
+    </footer>
+</body>
+</html> 
